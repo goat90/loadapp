@@ -8,5 +8,8 @@ import os
 #    return None
 
 @app.route("/")
-def getload(self,):
-	return 	getloadavg()[0] 
+def get_load():
+	return ("Load avg","200",os.getloadavg())
+
+get_load()
+
