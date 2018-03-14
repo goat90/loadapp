@@ -1,7 +1,13 @@
 from flask import Flask
+from flask import request
+
 app = Flask(__name__)
 import os
 
-@app.route("/")
+@app.route("/loadavg")
 def get_load():
 	return str(os.getloadavg())
+	return 'HTTP GET loadavg Page'
+app.add_url_rule('/loadavg', 'get_load', get_load)
+
+
