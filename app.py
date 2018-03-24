@@ -10,4 +10,5 @@ def get_load():
 	return 'HTTP GET loadavg Page'
 app.add_url_rule('/loadavg', 'get_load', get_load)
 
-
+if __name__=="__main__":
+	app.run(host='0.0.0.0')
